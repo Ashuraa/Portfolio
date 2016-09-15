@@ -1,0 +1,22 @@
+parameters:
+    portfolio.contact.type.class: MyBundle\Form\Type\ContactType
+    portfolio.contact.handler.class: MyBundle\Form\Handler\ContactHandler
+    portfolio.contact.model.class: MyBundle\Form\Model\Contact
+
+services:
+    portfolio.contact.form:
+        class: Symfony\Component\Form\Form
+        arguments: ["@portfolio.contact.form.type"]
+        factory_method: create
+        factory_service: form.factory
+
+    portfolio.contact.form.type:
+        class: %portfolio.contact.type.class%
+        arguments: [%portfolio.contact.model.class%]
+        tags:
+            - { name: form.type , alias: portfolio_contact }
+
+    portfolio.contact.form.handler:
+        class: %portfolio.contact.handler.class%
+        scope: request
+        arguments: ["@portfolio.contact.form", "@request", "@mailer"]

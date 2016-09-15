@@ -1,0 +1,66 @@
+{% extends "MyBundle::base.html.twig" %}
+
+{% block body %}
+	<nav class="navbar navbar-inverse ">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">CV</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="{{ path('portfolio_about') }}">Home</a></li>
+							<li><a href="{{ path('portfolio_CV') }}">CV</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+	<div class="container">
+	<br><br>
+		<h1>CV</h1>
+		<a href="{{ path('portfolio_telechargementCvPdf') }}">Telecharger le cv au format pdf.</a>
+		<h3>Compétences de développement</h3>
+		<p>
+			<strong>Systèmes d’exploitation :</strong> Windows 7, Windows server 2012, Linux Ubuntu. <br>
+			<strong>Langages :</strong> C#, Java, HTML, CSS, JavaScript, PHP, SQL. <br>
+			<strong>SGBD :</strong> SQL server 2008, MySQL 5. <br>
+			<strong>Environnements de développement:</strong> Visual Studio 2010, Eclipse, Aptana Studio <br>
+			<strong>Plateforme de développement web :</strong> Wamp Server <br>
+			<strong>Méthodes :</strong> Merise, UML
+		</p> <br>
+		<h3>Compétences de réseaux</h3>
+		<p>
+			<strong>Initiation aux réseaux :</strong> TCP/IP gestion manuelle de tableau de routage <br>
+			<strong>Initialisation à l’exploitation de systèmes informatiques : </strong> <br>
+			•	Composants matériels et maintenance de 1er niveau sur une machine cliente <br>
+			•	Création de machines virtuelles (VmWare workstation) <br>
+			•	Mise en place de services sous Windows et Linux Ubuntu (DHCP, HTTP, FTP) <br>
+			•	Commandes de base des systèmes d’exploitation <br>
+			•	Langage de script (bash, powershell)
+		</p> <br>
+		<h3>Formation</h3>
+		<p>
+			<strong>Etudes : </strong><br>
+			<strong>Juin 2016 : </strong>- BTS SIO (Services Informatiques aux Organisations),au Lycée Jean Rostand, Chantilly(60).<br>
+			<strong>Juin 2014 : </strong>- Baccalauréat STI2D (Sciences et Technologies des Industries et du Développement Durable) au Lycée Marie Curie, Nogent sur Oise(60).<br>
+			<strong>Juin 2011 : </strong>- Brevet National des Collèges au collège Edouard Herriot, Nogent sur Oise(60).
+		</p>
+
+		<p>
+			<strong>Langues étrangères : </strong> Anglais : Intermédiaire
+		</p> <br>
+		<h3>Expériences professionnelles</h3>
+		<p>
+			<strong>Janvier 2016 </strong> -Aryga (Orry la ville), Stage BTS 2ème année, 6 semaines, développement d'une application web sur symfony. <br>
+			<strong>Juin 2015 </strong>	-Darty (Bagnolet), Stage BTS 1ere année, 4 semaines, développement d'une application web et d'une application console en php. <br>
+			<strong>Juillet 2012</strong>            - MAF Phone ( Mantes-la-Jolie), Travail d’été, 1 mois, réparation et vente de 
+			téléphone portable, gestion des cabines téléphoniques par logiciel. <br>
+			<strong>Février 2012 </strong>        - MAF Phone (Mantes-la-Jolie), Stage de 3ème, 1 semaine, gestion des cabines 
+			téléphoniques par logiciel. <br>
+		</p><br>
+
+		<h3>Centres d’intérêt</h3>
+		<p>
+			Football, Jeux video<br>
+		</p>
+	</div>
+{% endblock %}

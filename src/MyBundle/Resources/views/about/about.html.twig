@@ -1,0 +1,78 @@
+{% extends "MyBundle::base.html.twig" %}
+
+{% block body %}
+	<nav class="navbar navbar-inverse ">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Présentation</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="{{ path('portfolio_about') }}">Home</a></li>
+					<li><a href="#">à</a></li>
+					<li><a href="#">propos</a></li>
+					<li><a href="#">de</a></li>
+					<li><a href="#">moi</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+<div class="container ">
+
+	<br><br><br>
+	<h3>Bienvenue sur mon portfolio </h3>
+	<p>
+		Bonjour, je m'appelle MEZDARI Achraf, j'ai 20 ans et je suis diplômé d'un BTS SIO  (Services Informatiques aux Organisations) 
+		en spécialité SLAM (Solutions Logicielles et Applications Métiers).
+		<br>Ce portfolio a été mis en place pour vous présenter un aperçu de mes compétences que j’ai acquises au fil de mon parcours au travers de mes 
+		différentes activités.
+		<br>Sur cet espace personnalisé vous pourrez retrouver une partie de mes travaux réalisés au cours des années.
+	</p>
+	<br><br>
+	<hr><br>
+	<h2>Ma Formation</h2>
+	<br><hr>
+	<br>
+	<p>
+		Le BTS Services informatiques aux organisations (sigle : BTS SIO) est le résultat d'une rénovation en profondeur du BTS Informatique de gestion. 
+		Il remplace ce dernier depuis la rentrée 2011.
+		<br><br>
+		Le brevet de technicien supérieur Services informatiques aux organisations est un cursus d'études se déroulant sur deux ans dans des lycées français, 
+		des écoles privées ou dans des centres de formation professionnelle. Il peut être préparé en formation continue, en alternance, par correspondance avec 
+		le Cned ou en formation initiale.
+		<br><br>
+		Dès le deuxième semestre de la première année, une option doit être choisie par l'étudiant entre :
+		<br>
+		<p>
+			<ul class="listeTab">
+				<li class="listeTab">Solutions Logicielles et Applications Métier (SLAM).</li>
+				<li class="listeTab">Solutions d’Infrastructure, Systèmes et Réseaux (SISR).</li>
+			</ul>
+		</p>
+	</p>
+	<br><br>
+	<hr><br>
+	<h2>Ma Spécialité</h2>
+	<br><hr>
+	<br>
+	<p>
+		<h3>L'option Solutions logicielles et applications métier (SLAM)</h3>
+		<br>
+		<p>
+			Le titulaire du diplôme participe à la production et à la fourniture de services en développant, en adaptant ou en maintenant des solutions applicatives. 
+			Il intervient plus particulièrement dans :
+		</p>
+		<p>
+			<ul class="listeTab">
+				<li class="listeTab">la définition des spécifications techniques à partir de l’expression des besoins des utilisateurs et des contraintes de l’organisation préalablement recensées</li>
+				<li class="listeTab">la réalisation ou l’adaptation puis la validation de solutions applicatives à l’aide des environnements de développement retenus</li>
+				<li class="listeTab">la gestion du patrimoine applicatif</li>
+				<li class="listeTab">la rédaction de la documentation d’une solution applicative et la formation des utilisateurs</li>
+				<li class="listeTab">la recherche de réponses adaptées à des problèmes liés à la fourniture des services informatiques</li>
+				<li class="listeTab">l’accompagnement et l’assistance des utilisateurs</li>
+				<li class="listeTab">le maintien de la qualité des services informatiques.</li>
+			</ul>
+		</p>
+	</p>
+</div>
+{% endblock %}

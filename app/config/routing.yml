@@ -1,0 +1,9 @@
+# my:
+#     resource: "@MyBundle/Controller/"
+#     type:     annotation
+#     prefix:   /
+
+
+portfolio:
+    resource: "@MyBundle/Resources/config/routing.yml"
+    prefix:   /

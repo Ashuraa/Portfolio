@@ -1,0 +1,69 @@
+
+<div id="navigation">
+	<ul>
+	    <li class="nav-item"><a href="{{ path('portfolio_about') }}">Home</a></li>
+	    <li class="nav-item"><a href="{{ path('portfolio_CV') }}">CV</a></li>
+	    <li class="nav-item"><a href="#">Stages</a>
+	    	<ul class="sousmenu">
+	    		<li><a href="{{ path('portfolio_darty') }}">Darty</a>
+	    		<li><a href="{{ path('portfolio_aryga') }}">Aryga</a>
+	    	</ul>
+	    </li>
+	    <li class="nav-item"><a href="#">Projets BTS</a>
+	    	<ul class="sousmenu">
+	    		<li><a href="{{ path('portfolio_ppeCsharp') }}">PPE C#</a>
+	    		<li><a href="{{ path('portfolio_ppeSymfony') }}">PPE Symfony</a>
+	    	</ul>
+	    </li>
+	    <!-- <li class="nav-item"><a href="#">Projets perso</a>
+	    	<ul class="sousmenu">
+	    		<li><a href="{{ path('portfolio_pong') }}">pong</a>
+	    	</ul>
+	    </li> -->
+	    <li class="nav-item"><a href="#">Veille technologie</a>
+	    	<ul class="sousmenu">
+	    		<li><a href="{{ path('portfolio_cordova') }}">Apache Cordova</a>
+	    	</ul>
+	    </li>
+	    <li class="nav-item"><a href="{{ path('portfolio_contact') }}">Contact</a></li>
+	</ul>
+	<br>
+	<div class="footer">
+		e-mail :  mezdariachraf@hotmail.fr
+		<br><br>
+		
+		Réseaux sociaux : <br>
+		<table>
+            <tr>
+            <td>
+                <a href="https://www.facebook.com/mezdari.achraf">
+                    {% image '@MyBundle/Resources/public/img/icon-fb.png' %}
+                        <img src="{{ asset_url }}" alt="facebook" height="40" width="40" />
+                    {% endimage %}
+                </a>
+            </td>
+            <td>
+            <a href="https://twitter.com/Kellox6">
+                {% image '@MyBundle/Resources/public/img/icon-tw.png' %}
+                    <img src="{{ asset_url }}" alt="twitter" height="40" width="40"/>
+                {% endimage %}
+            </a>
+            </td>
+            <td>
+            <a href="https://plus.google.com/u/0/102139366668923659821">
+                {% image '@MyBundle/Resources/public/img/icon-g+.png' %}
+                    <img src="{{ asset_url }}" alt="google+" height="40" width="40"/>
+                {% endimage %}
+            </a>
+            </td>
+            <td>
+            <a href="https://fr.linkedin.com/in/achraf-mezdari-b2ba46122">
+                {% image '@MyBundle/Resources/public/img/icon-in.png' %}
+                    <img src="{{ asset_url }}" alt="linkedin" height="40" width="40"/>
+                {% endimage %}
+            </a>
+            </td>
+            </tr>
+        </table>
+	</div>
+</div>

@@ -1,0 +1,131 @@
+{% extends "MyBundle::base.html.twig" %}
+
+{% block body %}
+<nav class="navbar navbar-inverse ">
+				<div class="container-fluid">
+					<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+						<a class="navbar-brand" href="#">Veille Technologique</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="{{ path('portfolio_about') }}">Home</a></li>
+							<li><a href="{{ path('portfolio_cordova') }}">Apache Cordova</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+<div class="container">
+<br><br>
+	<p align="center">
+		<h1><strong>APACHE CORDOVA</strong></h1>
+	</p>
+	<p>
+		<h2><strong>Présentation</strong></h2>
+	</p>
+	<p>
+		<strong>Apache Cordova</strong>
+		ou plus anciennement Apache Callback ou PhoneGap, est un framework open-source développé par la Fondation Apache. Il permet de créer des applications pour
+		différentes plateformes (Android, Firefox OS, iOS, Ubuntu, Windows 8...) en HTML, CSS et JavaScript.
+	</p>
+	<p>
+		Les applications qui en résultent sont hybrides, ce qui signifie qu'elles ne sont ni vraiment natives, ni purement basées sur les langages HTML, CSS et
+		JavaScript.
+	</p>
+	<p>
+		<h2><strong>Avantages et inconvénient</strong></h2>
+	</p>
+	<p>
+		<strong>Cordova</strong>
+		représente aujourd'hui <strong>la meilleure solution de développement cross-platflorm</strong> du marché. Elle permet avec peu d'efforts de développer une
+		application mobile une fois et de la faire fonctionner sur toutes les plateformes mobiles du marché.
+	</p>
+	<p>
+		<strong>Les avantages de Cordova sont nombreux :</strong>
+	</p>
+	<ul type="disc">
+		<li>
+			Cordova est <strong>OpenSource</strong> (Licence Apache)
+		</li>
+		<li>
+			Cordova est basée sur les <strong>standards du Web</strong>.
+		</li>
+		<li>
+			Cordova <strong>n'inclut pas d'interpréteur de code</strong> "opaque" comme Rhodes ou Flex Mobile.
+		</li>
+		<li>
+			Cordova supporte <strong>la plupart des plateformes mobiles</strong> du marché (Android, iOS, Blackberry, Windows Phone 7 ...).
+		</li>
+		<li>
+			Cordova possède <strong>de nombreux plugins</strong> permettant d'accéder aux ressources natives des terminaux mobiles.
+		</li>
+	</ul>
+	<p>
+		L'inconvénient de Cordova est que toute la logique métier doit être développée en <strong>Javascript</strong>. Cordova est donc adaptée à des projets
+		mobiles avec une faible logique métier.
+	</p>
+	<p>
+		<h2><strong>Architecture</strong></h2>
+	</p>
+	<p>
+		Il y a plusieurs éléments dans une application cordova. Le schéma suivant montre une vue de haut niveau de l'architecture de l'application cordova.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/veille/cordovaapparchitecture.png' %}
+	    	<img src="{{ asset_url }}" />
+		{% endimage %}
+	</p>
+	<p>
+		<h2><strong>Platformes supportées par Cordova 6.0.0</strong></h2>
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/veille/platform1.png' %}
+	    	<img src="{{ asset_url }}"  />
+		{% endimage %}
+	</p>
+	<p>
+		<h2><strong>Exemple d’utilisation de Cordova </strong></h2>
+	</p>
+	<p>
+		Serviceman Managing System au Japon Environ 400 commerciaux d’une société industrielle l’utilisent pour :
+	</p>
+	<p>
+		- rédiger un rapport de visite
+	</p>
+	<p>
+		- géolocalisation
+	</p>
+	<p>
+		- recevoir la signature de client
+	</p>
+	<p>
+		Cordova a été choisi pour ce projet car la société n’avait pas encore décidé quelle plateforme à choisir pour le téléphone portable de ses commerciaux.
+	</p>
+	<p>
+		<h2><strong>Nouvelles Récentes </strong></h2>
+	</p>
+	<p>
+		- Possibilité de développer avec Visual Studio 2015
+	</p>
+	<p>
+		- Lookout a signé un partenariat mardi avec Microsoft pour améliorer la sécurité des mobiles en entreprise et faciliter l’intégration de sa solution
+		Lookout Mobile Threat Protection (MTP) à la suite Enterprise Mobility de Microsoft (EMS).
+	</p>
+	<p>
+		- Visual Studio Tools pour Apache Cordova (TACO) reçoit sa mise à jour 10. L'outil a gagné deux caractéristiques principales:
+		<br/>
+		<br/>
+		Ajouter des plugins qui nécessitent des paramètres par dans le config.xml, ou choisir parmi 8 nouveaux plugins dans nos plugins de base, pour accéder aux
+		capacités de l'appareil.
+		<br/>
+		Ajout du support pour les versions les plus récentes de Cordova.
+	</p>
+
+
+</div>
+{% endblock %}

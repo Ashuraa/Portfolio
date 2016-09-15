@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF_8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title%}Mezdari Achraf{% endblock %}</title>
+	
+	{% block stylesheets %}
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/my/css/styles.css') }}" />
+	<link rel="stylesheet" href="{{ asset('bundles/my/css/slicknav.min.css') }}" />
+	{% endblock %}
+	{% block javascripts %}
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="{{ asset('bundles/my/js/accordionmenu.js') }}"></script>
+	<script src="{{ asset('bundles/my/js/jquery.slicknav.min.js') }}"></script>
+	{% endblock %}
+	<script>
+		if ( window.addEventListener ) {
+			var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+			window.addEventListener("keydown", function(e){
+				kkeys.push( e.keyCode );
+				if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+					window.location = "{{ path('portfolio_pong') }}";
+				}
+			}, true);
+		}
+	</script>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-2">
+			{% include 'MyBundle::menu.html.twig' %}
+		</div>
+		<div class="col-md-10">
+			{% block body %}
+
+			{% endblock %}
+		</div>
+	</div>
+
+</body>
+</html>

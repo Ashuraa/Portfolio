@@ -1,0 +1,85 @@
+{% extends "MyBundle::base.html.twig" %}
+
+{% block title "Contact" %}
+
+{% block body %}
+<nav class="navbar navbar-inverse ">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">contact</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="{{ path('portfolio_about') }}">Home</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    <div class="container">
+    <h1>Contactez-moi</h1>
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+
+    {{ flashMessage }}
+
+    {% endfor %}
+    {% if hasError %}
+        <div class="message error">
+           {{ form_errors(form) }}
+        </div>
+    {% endif %}
+    <form action="{{ path('portfolio_contact') }}" method="post" {{ form_enctype(form) }}>
+
+        {{ form_errors(form.email) }}
+        {{ form_widget(form.email, { 'attr':{'placeholder': 'Email' }}) }}
+
+        {{ form_errors(form.subject) }}
+        {{ form_widget(form.subject, { 'attr':{'placeholder': 'Sujet' }}) }}
+<br>
+        {{ form_errors(form.content) }}
+        {{ form_widget(form.content, { 'attr':{'placeholder': 'Contenu'}}) }}
+        
+        {{ form_rest(form) }}
+        <br><br>
+        <input type="submit" value="Envoyez"/>
+
+    </form>
+    <br><br>
+    e-mail :  mezdariachraf@hotmail.fr
+        <br><br>
+        
+        Réseaux sociaux : <br>
+        <table>
+            <tr>
+            <td>
+                <a href="https://www.facebook.com/mezdari.achraf">
+                    {% image '@MyBundle/Resources/public/img/icon-fb.png' %}
+                        <img src="{{ asset_url }}" alt="facebook" height="40" width="40" />
+                    {% endimage %}
+                </a>
+            </td>
+            <td>
+            <a href="https://twitter.com/Kellox6">
+                {% image '@MyBundle/Resources/public/img/icon-tw.png' %}
+                    <img src="{{ asset_url }}" alt="twitter" height="40" width="40"/>
+                {% endimage %}
+            </a>
+            </td>
+            <td>
+            <a href="https://plus.google.com/u/0/102139366668923659821">
+                {% image '@MyBundle/Resources/public/img/icon-g+.png' %}
+                    <img src="{{ asset_url }}" alt="google+" height="40" width="40"/>
+                {% endimage %}
+            </a>
+            </td>
+            <td>
+            <a href="https://fr.linkedin.com/in/achraf-mezdari-b2ba46122">
+                {% image '@MyBundle/Resources/public/img/icon-in.png' %}
+                    <img src="{{ asset_url }}" alt="linkedin" height="40" width="40"/>
+                {% endimage %}
+            </a>
+            </td>
+            </tr>
+        </table>
+</div>
+{% endblock %}

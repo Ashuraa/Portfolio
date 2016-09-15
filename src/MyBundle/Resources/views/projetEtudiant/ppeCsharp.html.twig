@@ -1,0 +1,78 @@
+{% extends "MyBundle::base.html.twig" %}
+
+{% block body %}
+<nav class="navbar navbar-inverse ">
+				<div class="container-fluid">
+					<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+						<a class="navbar-brand" href="#">Projet étudiant</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="{{ path('portfolio_about') }}">Home</a></li>
+						<li><a href="{{ path('portfolio_ppeCsharp') }}">ppe C#</a></li>
+						<li><a href="{{ path('portfolio_ppeSymfony') }}">ppe Symfony</a></li>
+					</ul>
+					</div>
+				</div>
+			</nav>
+<div class="container">
+<br><br>
+	<p>
+		<h2>Contexte:</h2>
+	</p>
+	<p>
+		Le laboratoire Galaxy Swiss Bourdin souhaite disposer d’une application de gestion des mécénats qui permet de gérer
+		les partenariats avec des associations ainsi que les actions effectuées envers celles-ci.
+	</p>
+	<p>
+		Nous étions une équipe de 4 personnes pour faire un développement en couche. Je me suis occupé de la partie des partenariats.
+		Nous avons fait tout d'abord, la base de données ainsi que les procédures stockés qui permet d'ajouter un partenariat et d'obtenir la liste des partenariats 
+	</p>
+	<p>
+	{% image '@MyBundle/Resources/public/img/Csharp/bdd.png' %}
+    	<img src="{{ asset_url }}" />
+	{% endimage %}
+	{% image '@MyBundle/Resources/public/img/Csharp/menu.png' %}
+    	<img src="{{ asset_url }}" />
+	{% endimage %}
+	</p>
+	<p>
+		Voici la méthode qui permet de récuperer la liste des partenariats:
+	</p>    
+	<p>
+		{% image '@MyBundle/Resources/public/img/Csharp/methListe.png' %}
+    	<img src="{{ asset_url }}" />
+	{% endimage %}
+	</p>
+	<p>
+		Création du formulaire de saisie d'un partenariat et de la méthode d'ajout d'un partenariat.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/Csharp/menu.png' %}
+	    	<img src="{{ asset_url }}" />
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/Csharp/methSaisie.png' %}
+	    	<img src="{{ asset_url }}" />
+		{% endimage %}
+	</p>
+	<p>
+		Création du formulaire de supression d'un partenariat et de la méthode de supression d'un partenariat.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/Csharp/sup.png' %}
+	    	<img src="{{ asset_url }}" />
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/Csharp/methSup.png' %}
+	    	<img src="{{ asset_url }}" />
+		{% endimage %}
+	</p>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+#    Accueil
+portfolio_about:
+    path:    /
+    defaults: { _controller: MyBundle:Default:about }
+
+#    CV
+portfolio_CV:
+    path:    /CV
+    defaults: { _controller: MyBundle:Default:cv }
+
+#    Stages
+portfolio_aryga:
+    path:    /aryga
+    defaults: { _controller: MyBundle:Default:aryga }
+
+portfolio_darty:
+    path:    /darty
+    defaults: { _controller: MyBundle:Default:darty }
+
+#    Projet BTS
+portfolio_ppeCsharp:
+    path:    /ppeCsharp
+    defaults: { _controller: MyBundle:Default:ppeCsharp }
+
+portfolio_ppeSymfony:
+    path:    /ppeSymfony
+    defaults: { _controller: MyBundle:Default:ppeSymfony }
+
+#    Projet perso
+portfolio_pong:
+    path:    /pong
+    defaults: { _controller: MyBundle:Default:pong }
+
+#    Veille techno
+portfolio_cordova:
+    path:    /cordova
+    defaults: { _controller: MyBundle:Default:cordova }
+
+#    contact
+portfolio_contact:
+    pattern:  /contact
+    defaults: { _controller: MyBundle:Contact:index }
+
+portfolio_telechargementCvPdf:
+    pattern: /telechargementCvPdf 
+    defaults: { _controller: MyBundle:Default:telechargementCvPdf }
+
+portfolio_telechargementSymfonyDocPdf:
+    pattern: /telechargementSymfonyDocPdf 
+    defaults: { _controller: MyBundle:Default:telechargementSymfonyDocPdf }

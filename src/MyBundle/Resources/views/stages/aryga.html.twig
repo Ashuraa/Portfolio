@@ -1,0 +1,389 @@
+{% extends "MyBundle::base.html.twig" %}
+
+{% block body %}
+<nav class="navbar navbar-inverse ">
+				<div class="container-fluid">
+					<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+						<a class="navbar-brand" href="#">Stages</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="{{ path('portfolio_about') }}">Home</a></li>
+						<li><a href="{{ path('portfolio_darty') }}">darty</a></li>
+						<li><a href="{{ path('portfolio_aryga') }}">aryga</a></li>
+					</ul>
+					</div>
+				</div>
+			</nav>
+<div class="container">
+	<br><br> <h1>Aryga</h1>
+	<p>
+		Du 4 Janvier au 12 février, j’ai effectué un stage au sein de l’entreprise Aryga située à Orry La Ville.
+	</p>
+	<p>
+		Au cours de ce stage, j’ai pu m’intéresser au développement web.
+	</p>
+	<p>
+		Plus largement, ce stage a été l’opportunité pour moi d’appréhender la programmation au niveau professionnel.
+	</p>
+	<p>
+		Au-delà d’enrichir mes connaissances en informatique, ce stage m’a permis d'en apprendre plus sur le monde professionnel en entreprise.
+	</p>
+	<p>
+		Mon stage a consisté à améliorer la gestion des meubles vendu aux clients.
+	</p>
+	<h3>
+	</h3>
+	<h1>
+		Présentation de l'entreprise
+	</h1>
+	<table border="0" cellpadding="0" cellspacing="0" width="580">
+		<tbody>
+			<tr>
+				<td>
+					<br/>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		La spécialité de l'entreprise Aryga est la fourniture de solutions innovantes et/ou sur mesure aux professionnels et aux particuliers. Ils se sont lancés
+		en 2011 dans la vente en ligne de ces produits.
+	</p>
+	<p>
+		Aryga possèdent deux site web différents, un nommé plusdeplace.fr pour la vente des produits et un autre nommé dessinetonmeuble.fr qui est permet de créer
+		directement en ligne un meuble.
+	</p>
+	<h1>
+		<a>Les travaux effectués</a>
+	</h1>
+	<p>
+		Au cours de ce stage, j’ai eu l’opportunité de découvrir un métier sous toutes ses formes et de comprendre de manière globale les difficultés que les
+		informaticiens pouvaient rencontrer. Pour une meilleure compréhension des tâches que j’ai pu effectuer, il apparaît approprié de traiter en premier lieu
+		des outils qui étaient mis à ma disposition, puis de traiter de manière détaillée les tâches que j’ai pu effectuer.
+	</p>
+	<h3>
+		<a name="_Toc29715854">1. </a>
+		Environnement technique
+	</h3>
+	<p>
+		Le logiciel notepad++ et Sublime Text a été mis à ma disposition afin de coder en php, javascript, jquery, ajax.
+	</p>
+	<p>
+		Bitvise SSH client m'a permis d'avoir un accès ftp au serveur.
+	</p>
+	<p>
+		J'ai utilisé le package Wampserver pour tester mes programmes et utilisé phpmyadmin pour créer la base de données.
+	</p>
+	<p>
+		J'ai travaillé sur le framework Symfony.
+	</p>
+	<h3>
+		<a name="_Toc29715855">2. </a>
+		Liste des Missions confiées
+	</h3>
+	<p>
+		Au cours de ce stage, j'ai eu pour mission de:
+	</p>
+	<p>
+		Développer une application web qui permet aux clients de visualiser leurs meubles en 3D une fois groupé.
+	</p>
+	<p>
+		<strong>Mission</strong>
+	</p>
+	<p>
+		L'objectif lors de ce stage a été de créer une application web qui permet aux clients de visualiser leurs meubles en 3D une fois groupé. Les meubles créés
+		par les clients sont enregistré dans le serveur de l'entreprise. Pour réaliser cet objectif, il a fallu récupérer les meubles en 3d grâce a un descriptif
+		du meuble écrit en json, qui permet de récupérer un rendu qui une fois envoyé au serveur permettra d'obtenir la 3d du meuble.
+	</p>
+	<p>
+		Après avoir proposé de travailler sur Symfony, J'ai créé la base de données sur MySql avec phpmyadmin.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/screenaryga/bddMcd.png' %}
+		<img src="{{ asset_url}}" />
+		{% endimage %}
+	</p>
+	<p>
+		Après que Symfony a été installé sur le serveur j'ai eu accès au serveur avec Bitvise.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/screenaryga/accesFtp.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+	</p>
+	<p>
+		Puis j'ai créé un formulaire d'ajout et d'obtention d'un descriptif pour pouvoir enregistrer le descriptif dans la base de données ou le récupérer sous
+		forme de texte.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/screenaryga/descObtenir.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/screenaryga/descAjout.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+	</p>
+	<p>
+		J'ai ajouté par la suite les méthodes addDescriptif et getDescriptif dans le contrôleur du descriptif.
+		{% image '@MyBundle/Resources/public/img/screenaryga/adddesc.png' %}
+		<img src="{{ asset_url}}" />
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/screenaryga/getdesc.png' %}
+		<img src="{{ asset_url}}" />
+		{% endimage %}
+	</p>
+	<p>
+		Ensuite j'ai créé les formulaires d'ajout et d'affichage d'un rendu. L'ajout permettra grâce à l'id du meuble de récupérer le rendu dans le serveur grâce
+		aux descriptif enregistrer dans la base de données et enregistrer le rendu dans cette bdd. L'affichage permet d'afficher le meuble en 3d.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/screenaryga/renduAff.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/screenaryga/RenduAjout.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+	</p>
+	<p>
+		Puis j'ai ajouté les méthodes addRendu et showMeuble.
+		{% image '@MyBundle/Resources/public/img/screenaryga/addrend.png' %}
+		<img src="{{ asset_url}}" />
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/screenaryga/getrendu.png' %}
+		<img src="{{ asset_url}}" />
+		{% endimage %}
+	</p>
+	<p>
+		Afin de récupérer les rendus sur le serveur une méthode m'a été fournie.
+		{% image '@MyBundle/Resources/public/img/screenaryga/servruby.png' %}
+		<img src="{{ asset_url}}" />
+		{% endimage %}
+	</p>
+	<p>
+		Après s'être occupé des meubles, je suis passé aux groupes de meubles. J'ai donc fait le formulaire d'ajout, de modification et de consultation d'un
+		groupe.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/screenaryga/GrpNew.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/screenaryga/grpModif.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/screenaryga/grpView.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+	</p>
+	<p>
+		La consultation permet aux clients de voir leurs meubles. Et grâce au code fourni par mon chef il a été possible d'afficher ces meubles en 3D.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/screenaryga/view3d.png' %}
+		<img src="{{ asset_url}}" />
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/screenaryga/3dfourni.png' %}
+		<img src="{{ asset_url}}" />
+		{% endimage %}
+	</p>
+	<p>
+		Quand aux formulaires d'ajout d'un groupe et de modification il ouvre une nouvelle fenêtre de gestion des groupes.
+		{% image '@MyBundle/Resources/public/img/screenaryga/grpModif3D.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+	</p>
+	<p>
+		Cette Gestion permet grâce a du code Ajax d'ajouter un meuble dans le groupe, de supprimer un meuble ou de changer la position du meuble dans la vue 3D. La
+		position du meuble sera enregistrée dans la base de données lors de la validation.
+	</p>
+	<p>
+		Par la suite, il m'a été demandé de créer des projets, car les clients peuvent avoir plusieurs groupes de meubles.
+	</p>
+	<p>
+		Donc un projet serai composé de un ou plusieurs groupes. On m'a donc proposé de créer une nouvelle page de gestion des projets et pour faciliter
+		l'utilisation de l'application, intégrer la gestion des groupes et des meubles dedans.
+	</p>
+	<p>
+		Pour cela j'ai commencé en faisant un formulaire de création et de modification d'un nouveau projet.
+		{% image '@MyBundle/Resources/public/img/screenaryga/ProjNew.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/screenaryga/prjModif.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+	</p>
+	<p>
+		Lors de la validation cela ouvre un nouvel onglet avec 3 parties : une partie groupe, une partie meuble et une partie 3D où les meubles s'afficheront.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/screenaryga/prjviewhome.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+	</p>
+	<p>
+		La partie groupe contient les liens des groupes du projet qui permet d'afficher la 3D lors du clique. Lors de la sélection du groupe les meubles de ce
+		groupe s'affichent en dessous.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/screenaryga/prjViewgroupe.png' %}
+		<img src="{{ asset_url}}"/>
+		{% endimage %}
+	</p>
+	<p>
+		Il y a aussi 4 boutons qui afficheront un formulaire le tout codé en Ajax pour ne pas recharger la page.
+	</p>
+	<p>
+		Un pour créer un nouveau groupe.
+	</p>
+	{% image '@MyBundle/Resources/public/img/screenaryga/prjViewNewgrp.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+</p>
+<p>
+	Un pour ajouter un groupe existant dans la base de données.
+</p>
+<p>
+	{% image '@MyBundle/Resources/public/img/screenaryga/prjViewgrpAdd.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+</p>
+<p>
+	Un bouton pour supprimer le groupe du projet et un bouton modifier qui permettra de modifier la position d'un meuble du groupe.
+</p>
+<p>
+	{% image '@MyBundle/Resources/public/img/screenaryga/prjViewPos.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+</p>
+<p>
+	Pour pouvoir utiliser ce bouton il faut sélectionner un meuble en cliquant sur son nom sinon un message d'erreur apparaît.
+	{% image '@MyBundle/Resources/public/img/screenaryga/prjViewVerif.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+</p>
+<p>
+	La partie meuble permet de faire la même chose que les groupes.
+</p>
+<p>
+	l'ajout d'un nouveau meuble permet grâce à un descriptif du meuble d'aller chercher le meuble dans le serveur pour l'ajouter dans la bdd et enfin l'ajouter
+	au groupe.
+</p>
+<p>
+	{% image '@MyBundle/Resources/public/img/screenaryga/prjViewNewMb.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+</p>
+<p>
+	l'ajout d'un meuble permet de sélectionner un meuble existant dans la bdd.
+</p>
+<p>
+	{% image '@MyBundle/Resources/public/img/screenaryga/prjViewAddMb.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+</p>
+<p>
+	Et il y a la suppression du meuble et un bouton pour modifier le meuble qui affichera son descriptif en-dessous et où on pourra le modifier.
+</p>
+<p>
+	{% image '@MyBundle/Resources/public/img/screenaryga/prjViewEditMb.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+</p>
+<p>
+	Par la suite je me suis occupé de la connexion, pour ne pas donner l'accès à la modification de la base de données à un client.
+</p>
+<p>
+	Pour cela je me suis demandé si il exister un bundle déjà tous fait sur internet pour la connexion. Après une petite recherche, j'ai trouvé le
+	FosUserBundle, donc après avoir suivi un tutoriel dessus je l'ai installé, ce bundle ajoute une table utilisateur dans la base de données et possède les
+	formulaire de connexion qui suit :
+</p>
+<p>
+	{% image '@MyBundle/Resources/public/img/screenaryga/connexion.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+	{% image '@MyBundle/Resources/public/img/screenaryga/coNewUser.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+	{% image '@MyBundle/Resources/public/img/screenaryga/coModifMdP.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+	{% image '@MyBundle/Resources/public/img/screenaryga/coProfil.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+	{% image '@MyBundle/Resources/public/img/screenaryga/coProfilModif.png' %}
+	<img src="{{ asset_url}}"/>
+	{% endimage %}
+</p>
+<p>
+	Après avoir fini, j'ai fait un document technique qui explique comment effectuer quelque tâche sur Symfony.
+</p>
+<p>
+	<a href="{{ path('portfolio_telechargementSymfonyDocPdf') }}">Voir le document.</a>
+</p>
+<p>
+	Mission réalisée en 6 semaines.
+</p>
+<p>
+	<strong><u>Activités et compétences concernées :</u></strong>
+</p>
+<p>
+	A1.1.1 Analyse du cahier des charges d'un service à produire
+</p>
+<br/>
+<p>
+	A1.4.1 Participation à un projet
+</p>
+<br/>
+<p>
+	A4.1.1 Proposition d'une solution applicative
+</p>
+<br/>
+<p>
+	A4.1.2 Conception ou adaptation de l’interface utilisateur d’une solution applicative
+</p>
+<br/>
+<p>
+	A4.1.3 Conception ou adaptation d’une base de données
+</p>
+<br/>
+<p>
+	A4.1.4 Définition des caractéristiques d’une solution applicative
+</p>
+<br/>
+<p>
+	A4.1.5 Prototypage de composants logiciels
+</p>
+<br/>
+<p>
+	A4.1.6 Gestion d'environnements de développement et de test
+</p>
+<br/>
+<p>
+	A4.1.7 Développement, utilisation ou adaptation de composants logiciels
+</p>
+<br/>
+<p>
+	A4.1.8 Réalisation des tests nécessaires à la validation d’éléments adaptés ou développés
+</p>
+<br/>
+<p>
+	A4.1.9 Rédaction d'une documentation technique
+</p>
+<br/>
+<p>
+	A5.2.3 Repérage des compléments de formation ou d'auto-formation ...
+</p>
+<br/>
+
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends "MyBundle::base.html.twig" %}
+
+{% block body %}
+<nav class="navbar navbar-inverse ">
+				<div class="container-fluid">
+					<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+						<a class="navbar-brand" href="#">Projet étudiant</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="{{ path('portfolio_about') }}">Home</a></li>
+						<li><a href="{{ path('portfolio_ppeCsharp') }}">ppe C#</a></li>
+						<li><a href="{{ path('portfolio_ppeSymfony') }}">ppe Symfony</a></li>
+					</ul>
+					</div>
+				</div>
+			</nav>
+<div class="container">
+<br><br>
+	<p>
+		<h2>Contexte:</h2>
+	</p>
+	<p>
+		Créer un site web permettant de gérer les objectifs commerciaux de vente de produits vétérinaires pour animaux auprès des pharmacies.
+	</p>
+	<p>
+		Création de la base de données.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/symfony/bdd_Symfony.png' %}
+	    	<img src="{{ asset_url }}" />
+		{% endimage %}
+	</p>
+	<p>
+		Création de la page d'accueil.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/symfony/accueil.png' %}
+	    	<img src="{{ asset_url }}"  />
+		{% endimage %}
+	</p>
+	<p>
+		Liste des pharmacies
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/symfony/listePharma.png' %}
+	    	<img src="{{ asset_url }}"  />
+		{% endimage %}
+	</p>
+	<p>
+		Les liens de la liste renvoie vers la présentation de la pharmacie.
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/symfony/viewPharma.png' %}
+	    	<img src="{{ asset_url }}"  />
+		{% endimage %}
+	</p>
+	<p>
+		Dans cette vue, il y a 3 boutons. Un pour retourner à la page précedente, une pour supprimer la pharmacie et un pour la modifier qui renvoie sur le
+		même formulaire que l'ajout d'une pharmacie.
+		Voici l'ajout:
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/symfony/ajoutPharma.png' %}
+	    	<img src="{{ asset_url }}"  />
+		{% endimage %}
+	</p>
+	<p>
+		Et voici la modification:
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/symfony/modifPharma.png' %}
+	    	<img src="{{ asset_url }}"  />
+		{% endimage %}
+	</p>
+	<p>
+		Puis j'ai fait la même chose pour les produits:
+	</p>
+	<p>
+		{% image '@MyBundle/Resources/public/img/symfony/listeProd.png' %}
+	    	<img src="{{ asset_url }}"  />
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/symfony/viewProd.png' %}
+	    	<img src="{{ asset_url }}"  />
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/symfony/ajoutProd.png' %}
+	    	<img src="{{ asset_url }}"  />
+		{% endimage %}
+		{% image '@MyBundle/Resources/public/img/symfony/modifProd.png' %}
+	    	<img src="{{ asset_url }}"  />
+		{% endimage %}
+	</p>
+</div>
+</div>
+{% endblock %}
